@@ -1,0 +1,13 @@
+[alias]
+	co = checkout
+  br = branch
+  ci = commit
+  st = status
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[user]
+
+  name = Rohit Dandnayak
+  email = rohit.dandnayak@soroco.com
+[core]
+	autocrlf = input
