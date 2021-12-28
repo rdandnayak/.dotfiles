@@ -7,7 +7,7 @@
 
 [user]
 
-  name = Rohit Dandnayak
-  email = rohit.dandnayak@soroco.com
+  name = {{ user_name }}
+  email = {{ user_email }}
 [core]
 	autocrlf = input

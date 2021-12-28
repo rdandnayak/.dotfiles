@@ -102,11 +102,11 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 # // Added by Rohit Dandnayak
-PATH=$PATH:/mnt/c/Users/rohit.dandnayak/programs
+PATH=$PATH:$HOME/.dotfiles/bin/programs
 bindkey -s ^f "tmux-sessionizer\n"
 
 
-export START="/mnt/c/Users/rohit.dandnayak"
+export START= "$(wslvar USERPROFILE)"
 if [[ $PWD == $HOME ]]; then
     cd $START
 fi
