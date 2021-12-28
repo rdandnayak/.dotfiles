@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 # // Added by Rohit Dandnayak
-PATH=$PATH:$HOME/.dotfiles/bin/programs
+PATH=$PATH:$HOME/.dotfiles/programs
 bindkey -s ^f "tmux-sessionizer\n"
 
 
