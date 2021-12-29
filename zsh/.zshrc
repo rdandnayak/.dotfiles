@@ -105,6 +105,9 @@ source $ZSH/oh-my-zsh.sh
 PATH=$PATH:$HOME/.dotfiles/programs
 bindkey -s ^f "tmux-sessionizer\n"
 
+# Enable vi mode
+bindkey -v
+
 
 export START= "$(wslvar USERPROFILE)"
 if [[ $PWD == $HOME ]]; then
