@@ -109,10 +109,10 @@ bindkey -s ^f "tmux-sessionizer\n"
 # bindkey -v
 
 
-# export START= $HOME
-# if [[ $PWD == $HOME ]]; then
-#     cd $START
-# fi
+export START= $(wslpath "$(wslvar USERPROFILE)")
+if [[ $PWD == $HOME ]]; then
+    cd $START
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
