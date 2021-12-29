@@ -108,8 +108,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 # Enable vi mode
 # bindkey -v
 
-
-export START= $(wslpath "$(wslvar USERPROFILE)")
+START= "$(wslpath "$(wslvar USERPROFILE)")"
 if [[ $PWD == $HOME ]]; then
     cd $START
 fi
