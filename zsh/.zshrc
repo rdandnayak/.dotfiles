@@ -106,7 +106,7 @@ PATH=$PATH:$HOME/.dotfiles/programs
 bindkey -s ^f "tmux-sessionizer\n"
 
 # Enable vi mode
-bindkey -v
+# bindkey -v
 
 
 # export START= $HOME
