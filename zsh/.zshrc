@@ -108,11 +108,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 # Enable vi mode
 # bindkey -v
 
-START= "$(wslpath "$(wslvar USERPROFILE)")"
+START="$(wslpath "$(wslvar USERPROFILE)")"
 if [[ $PWD == $HOME ]]; then
     cd $START
 fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
