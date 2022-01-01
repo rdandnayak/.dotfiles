@@ -108,7 +108,11 @@ bindkey -s ^f "tmux-sessionizer\n"
 # Enable vi mode
 # bindkey -v
 
+if [[ $OSTYPE == 'darwin'* ]]; then
+START=$HOME
+else
 START="$(wslpath "$(wslvar USERPROFILE)")"
+fi
 if [[ $PWD == $HOME ]]; then
     cd $START
 fi
