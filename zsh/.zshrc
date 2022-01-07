@@ -3,6 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export NPM_CONFIG_PREFIX=$HOME/.npm-global
+export PATH=$PATH:$HOME/.dotfiles/programs
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,10 +104,8 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 # // Added by Rohit Dandnayak
-PATH=$PATH:$HOME/.dotfiles/programs
 bindkey -s ^f "tmux-sessionizer\n"
 
-NPM_CONFIG_PREFIX=~/.npm-global
 
 # Enable vi mode
 # bindkey -v
