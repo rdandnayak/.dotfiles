@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export NPM_CONFIG_PREFIX=$HOME/.npm-global
+export N_PREFIX=$NPM_CONFIG_PREFIX/.n
 export PATH=$PATH:$HOME/.dotfiles/programs
 
 # Set name of the theme to load --- if set to "random", it will
