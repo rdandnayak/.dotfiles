@@ -5,7 +5,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export NPM_CONFIG_PREFIX=$HOME/.npm-global
 export N_PREFIX=$HOME/.n
-export PATH=$PATH:$HOME/.dotfiles/programs:$NPM_CONFIG_PREFIX/bin
+export PATH=$PATH:$HOME/.dotfiles/programs:$NPM_CONFIG_PREFIX/bin:$N_PREFIX/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
