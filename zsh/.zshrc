@@ -13,7 +13,8 @@ export ZSH=$HOME/.oh-my-zsh
 export NPM_CONFIG_PREFIX=$HOME/.npm-global
 # export N_PREFIX=$HOME/.n
 addToPATH $HOME/.dotfiles/programs
-addToPATH $NPM_CONFIG_PREFIX/bin:$HOME/n/bin
+addToPATH $NPM_CONFIG_PREFIX/bin
+addToPATH $HOME/n/bin
 
 export PATH
 
