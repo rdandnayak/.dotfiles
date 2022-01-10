@@ -1,11 +1,21 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+function addToPATH {
+  case ":$PATH:" in
+    *":$1:"*) :;; # already there
+    *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
+  esac
+}
+
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-export NPM_CONFIG_PREFIX=$HOME/.npm-global
+addToPATH ZSH=$HOME/.oh-my-zsh
+NPM_CONFIG_PREFIX=$HOME/.npm-global
 # export N_PREFIX=$HOME/.n
-export PATH=$PATH:$HOME/.dotfiles/programs:$NPM_CONFIG_PREFIX/bin:$HOME/n/bin
+addToPATH PATH=$HOME/.dotfiles/programs
+addToPATH $NPM_CONFIG_PREFIX/bin:$HOME/n/bin
+
+export PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
