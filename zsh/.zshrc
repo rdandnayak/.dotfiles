@@ -9,10 +9,10 @@ function addToPATH {
 }
 
 # Path to your oh-my-zsh installation.
-addToPATH ZSH=$HOME/.oh-my-zsh
-NPM_CONFIG_PREFIX=$HOME/.npm-global
+export ZSH=$HOME/.oh-my-zsh
+export NPM_CONFIG_PREFIX=$HOME/.npm-global
 # export N_PREFIX=$HOME/.n
-addToPATH PATH=$HOME/.dotfiles/programs
+addToPATH $HOME/.dotfiles/programs
 addToPATH $NPM_CONFIG_PREFIX/bin:$HOME/n/bin
 
 export PATH
