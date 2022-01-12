@@ -18,7 +18,7 @@ addToPATH $HOME/.dotfiles/programs
 addToPATH $NPM_CONFIG_PREFIX/bin
 addToPATH $HOME/n/bin
 
-export PATH
+export PATH=$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
