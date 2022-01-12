@@ -9,6 +9,7 @@ function addToPATH {
 }
 
 # Path to your oh-my-zsh installation.
+# https://ourcodeworld.com/articles/read/1506/how-to-remove-the-zsh-message-in-the-terminal-of-macos-bigsur-ignore-insecure-directories-and-continue-or-abort-compinit
 export ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 export NPM_CONFIG_PREFIX=$HOME/.npm-global
