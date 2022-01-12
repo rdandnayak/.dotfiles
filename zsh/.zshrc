@@ -9,6 +9,7 @@ function addToPATH {
 }
 
 # Path to your oh-my-zsh installation.
+export ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 export NPM_CONFIG_PREFIX=$HOME/.npm-global
 # export N_PREFIX=$HOME/.n
