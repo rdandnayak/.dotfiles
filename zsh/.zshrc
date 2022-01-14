@@ -17,6 +17,7 @@ export NPM_CONFIG_PREFIX=$HOME/.npm-global
 addToPATH $HOME/.dotfiles/programs
 addToPATH $NPM_CONFIG_PREFIX/bin
 addToPATH $HOME/n/bin
+addToPATH $HOME/.pyenv/bin
 
 PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Program Files\/nodejs://')
 PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Users\/jburkholder\/AppData\/Roaming\/npm://')
