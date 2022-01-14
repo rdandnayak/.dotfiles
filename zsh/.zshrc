@@ -18,6 +18,10 @@ addToPATH $HOME/.dotfiles/programs
 addToPATH $NPM_CONFIG_PREFIX/bin
 addToPATH $HOME/n/bin
 
+PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Program Files\/nodejs://')
+PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Users\/jburkholder\/AppData\/Roaming\/npm://')
+PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Program Files (x86)\/Yarn\/bin://')
+
 export PATH=$PATH
 
 # Set name of the theme to load --- if set to "random", it will

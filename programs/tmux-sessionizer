@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-session=$(find $HOME -mindepth 1 -not -path '*/\.*' -maxdepth 2 -type d | fzf)
+session=$(find $HOME -mindepth 1 -maxdepth 2 -type d | fzf)
 else
 session=$(find  $(wslpath "$(wslvar USERPROFILE)") -mindepth 1 -maxdepth 2 -type d | fzf)
 fi
