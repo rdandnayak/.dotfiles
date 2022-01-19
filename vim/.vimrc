@@ -1,7 +1,7 @@
 set scrolloff=8
 set number
 set relativenumber
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 set tw=80
 set tabstop=2 softtabstop=2
 set shiftwidth=2
