@@ -1,7 +1,6 @@
 set scrolloff=8
 set number
 set relativenumber
-set clipboard=unnamed
 set tw=80
 set tabstop=2 softtabstop=2
 set shiftwidth=2
@@ -11,25 +10,26 @@ set autochdir
 set incsearch
 set nohlsearch
 set autochdir
+set laststatus=2
 
 
 " ----------------------------------------
 " Automatic installation of vim-plug, if it's not available
 " ----------------------------------------
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+" if empty(glob('~/.vim/autoload/plug.vim'))
+"   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+"         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
 "-----------------------------------------
 
 "-----------------------------------------
 " Automatically install missing plugins on startup
 "-----------------------------------------
-autocmd VimEnter *
-      \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-      \|   PlugInstall --sync | q
-      \| endif
+" autocmd VimEnter *
+"       \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+"       \|   PlugInstall --sync | q
+"       \| endif
 "-----------------------------------------
 
 
@@ -37,88 +37,32 @@ autocmd VimEnter *
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'github/copilot.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'itchyny/lightline.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'pangloss/vim-javascript'
-Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
-Plug 'dense-analysis/ale'
-Plug 'moll/vim-node'
 Plug 'tpope/vim-fugitive'
-Plug 'makerj/vim-pdf'
 Plug 'preservim/nerdtree'
 Plug 'PhilRunninger/nerdtree-buffer-ops'
 Plug 'yegappan/mru'
 call plug#end()
 
 
-
-autocmd FileType netrw setl bufhidden=delete
-
-set nocompatible
-set path+=**
-
-let g:airline#extensions#tabline#formatter = 'ctrlspace'
-
-
-autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
-
-
 :let g:NERDTreeWinSize=60
 
-
-"packloadall
-set laststatus=2
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#config#print_width = '80'
-let g:ale_fixers = {
-\   'javascript': ['eslint','prettier'],
-\   'typescript': ['prettier'],
-\   'css': ['prettier'],
-\   'scss': ['prettier'],
-\   'html': ['prettier'],
-\   '*': ['remove_trailing_lines', 'trim_whitespace']
-\}
-let g:ale_fix_on_save = 1
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-let g:coc_global_extension = ['coc-json', 'coc-html', 'coc-css', 'coc-tslint', 'coc-prettier', 'coc-tsserver', 'coc-angular']
-
-"set termguicolors
-"set background="dark"
-set bg=dark
 try
   colorscheme gruvbox
 catch
 endtry
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
 
 syntax on
 syntax enable
 
 "Mode Settings
-
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
@@ -137,8 +81,8 @@ filetype plugin on
 filetype indent on
 
 " Set to auto read when a file is changed from the outside
-set autoread
-au FocusGained,BufEnter * checktime
+" set autoread
+" au FocusGained,BufEnter * checktime
 
 " Turn on the Wild menu
 set wildmenu
@@ -230,7 +174,7 @@ nmap <leader>gj :diffget //3<CR>
 nmap <leader>gh :diffget //2<CR>
 nmap <leader>x :!chmod +x % //2<CR>
 
-source ~/.coc.vim
+" source ~/.coc.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
