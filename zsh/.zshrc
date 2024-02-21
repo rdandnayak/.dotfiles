@@ -20,6 +20,7 @@ addToPATH $HOME/n/bin
 addToPATH $HOME/.pyenv/bin
 
 PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Program Files\/nodejs://')
+PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Program Files\/nodejs\/npm://')
 PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Users\/jburkholder\/AppData\/Roaming\/npm://')
 PATH=$(echo "$PATH" | sed -e 's/\/mnt\/c\/Program Files (x86)\/Yarn\/bin://')
 
